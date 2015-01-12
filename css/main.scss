@@ -1,0 +1,67 @@
+@import 'normalize';
+
+// COLORS
+$odd-row-color: RGB(108, 191, 238);
+$even-row-color: RGB(53, 148, 203);
+$text-color: white;
+$font-face: Lato, Serif;
+
+
+// MIXINS
+@mixin clearfix() {
+  overflow: auto;
+}
+
+
+
+.timeline-row {
+  @include clearfix();
+  margin-top: 24px;
+}
+
+.timestamp {
+  float: left;
+  width: 20%;
+  text-align: right; 
+  
+  .date {
+    font-size: 16px;
+  }
+
+  .time {
+    font-size: 48px;
+    &:nth-child(odd) {
+      color: $odd-row-color;
+    }
+
+    &:nth-child(even) {
+      color: $even-row-color;
+    }
+
+  }
+
+}
+
+.col-div {
+  float: left;
+}
+
+ 
+.recipe:nth-of-type(odd) {
+    background-color: $odd-row-color;
+  }
+
+.recipe:nth-of-type(even) {
+    background-color: $even-row-color;
+  }
+
+
+.recipe {
+  float: left;
+  width: 80%;  
+  border-radius: 5px 5px;  
+  
+  h1 {
+    padding: 2% 0 0 4%;
+  }
+ }
