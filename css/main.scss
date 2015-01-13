@@ -35,7 +35,9 @@ $font-face: Lato, Serif;
 
 .timeline-row {
   @include clearfix();
+  padding-top: 24px;
   margin-top: 24px;
+  position: relative;
 }
 
 .timestamp {
@@ -104,6 +106,7 @@ $font-face: Lato, Serif;
     border: .5em solid $light;
     border-radius: 2.5em;
     left: 10.6em;
+    top: 0;
     z-index: 2; 
   }
 

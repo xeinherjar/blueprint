@@ -372,7 +372,9 @@ th {
 
 .timeline-row {
   overflow: auto;
-  margin-top: 24px; }
+  padding-top: 24px;
+  margin-top: 24px;
+  position: relative; }
 
 .timestamp {
   float: left;
@@ -422,6 +424,7 @@ th {
     border: 0.5em solid RGB(108, 191, 238);
     border-radius: 2.5em;
     left: 10.6em;
+    top: 0;
     z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */
