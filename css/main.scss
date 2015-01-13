@@ -1,8 +1,11 @@
 @import 'normalize';
 
 // COLORS
-$odd-row-color: RGB(108, 191, 238);
-$even-row-color: RGB(53, 148, 203);
+$dark: RGB(53, 148, 203);
+$light: RGB(108, 191, 238);
+
+$odd-row-color: $light; 
+$even-row-color: $dark;
 $text-color: white;
 $font-face: Lato, Serif;
 
@@ -12,18 +15,21 @@ $font-face: Lato, Serif;
   overflow: auto;
 }
 
-
+.container {
+  width: 90%;
+}
 
 .timeline-row {
   @include clearfix();
   margin-top: 24px;
+  position: relative;
 }
 
 .timestamp {
   float: left;
-  width: 20%;
   text-align: right; 
-  
+  margin-left: 2em;
+
   .date {
     font-size: 16px;
   }
@@ -40,12 +46,17 @@ $font-face: Lato, Serif;
 
   }
 
-}
+  &:first-child:after {
+    position: absolute;
+    top: 0;
+    left: 12em;
+    content: " ";
+    width: 0.75em;
+    height: 100%;
+    background-color: $light;
+  }
 
-.col-div {
-  float: left;
 }
-
  
 .recipe:nth-of-type(odd) {
     background-color: $odd-row-color;
@@ -58,10 +69,33 @@ $font-face: Lato, Serif;
 
 .recipe {
   float: left;
-  width: 80%;  
+  width: 68%;  
   border-radius: 5px 5px;  
-  
+  margin-left: 6.25em; 
+  color: white;
+
   h1 {
-    padding: 2% 0 0 4%;
+    margin: 1.75em 1.25em 1em 1.25em;
+    font-size: 1.7em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid white;
   }
+
+  p {
+    padding-left: 2em;
+    font-size: 1.25em;
+    letter-spacing: -1px;
+  }
+
+  &:before {
+    position: absolute;
+    content: " ";
+    background-color: $dark;
+    width: 2.5em;
+    height: 2.5em;
+    border: .5em solid $light;
+    border-radius: 2.5em;
+    left: 10.6em;
+  }
+
  }
