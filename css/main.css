@@ -375,6 +375,14 @@ th {
   padding-top: 24px;
   margin-top: 24px;
   position: relative; }
+  .timeline-row:nth-child(odd) .recipe {
+    background-color: RGB(108, 191, 238); }
+  .timeline-row:nth-child(even) .recipe {
+    background-color: RGB(53, 148, 203); }
+  .timeline-row:nth-child(odd) .time {
+    color: RGB(108, 191, 238); }
+  .timeline-row:nth-child(even) .time {
+    color: RGB(53, 148, 203); }
 
 .timestamp {
   float: left;
@@ -384,16 +392,6 @@ th {
     font-size: 16px; }
   .timestamp .time {
     font-size: 48px; }
-    .timestamp .time:nth-child(odd) {
-      color: RGB(108, 191, 238); }
-    .timestamp .time:nth-child(even) {
-      color: RGB(53, 148, 203); }
-
-.recipe:nth-of-type(odd) {
-  background-color: RGB(108, 191, 238); }
-
-.recipe:nth-of-type(even) {
-  background-color: RGB(53, 148, 203); }
 
 .recipe {
   float: left;

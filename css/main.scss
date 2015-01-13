@@ -38,6 +38,24 @@ $font-face: Lato, Serif;
   padding-top: 24px;
   margin-top: 24px;
   position: relative;
+ 
+  &:nth-child(odd) .recipe {
+    background-color: $odd-row-color;
+  }
+
+  &:nth-child(even) .recipe {
+    background-color: $even-row-color;
+  }
+
+  &:nth-child(odd) .time {
+    color: $odd-row-color;
+  }
+
+  &:nth-child(even) .time {
+    color: $even-row-color;
+  }
+
+
 }
 
 .timestamp {
@@ -51,24 +69,8 @@ $font-face: Lato, Serif;
 
   .time {
     font-size: 48px;
-    &:nth-child(odd) {
-      color: $odd-row-color;
-    }
-
-    &:nth-child(even) {
-      color: $even-row-color;
-    }
-
-  }
+   }
 }
- 
-.recipe:nth-of-type(odd) {
-    background-color: $odd-row-color;
-  }
-
-.recipe:nth-of-type(even) {
-    background-color: $even-row-color;
-  }
 
 
 .recipe {
