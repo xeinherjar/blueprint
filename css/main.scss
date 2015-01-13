@@ -8,7 +8,7 @@ $odd-row-color: $light;
 $even-row-color: $dark;
 $text-color: white;
 $font-face: Lato, Serif;
-
+$line-color: RGB(175, 220, 248);
 
 // MIXINS
 @mixin clearfix() {
@@ -29,7 +29,7 @@ $font-face: Lato, Serif;
       content: " ";
       width: 0.75em;
       height: 100%;
-      background-color: $light;
+      background-color: $line-color;
     }
 }
 
@@ -102,10 +102,12 @@ $font-face: Lato, Serif;
     position: absolute;
     content: " ";
     background-image: url("../img/icon-upload.png");
+    background-repeat: no-repeat;
+    background-position: 0.75em .8em;
     background-color: $dark;
     width: 2.5em;
     height: 2.5em;
-    border: .5em solid $light;
+    border: .5em solid $line-color;
     border-radius: 2.5em;
     left: 10.6em;
     top: 0;

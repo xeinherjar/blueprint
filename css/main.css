@@ -368,7 +368,7 @@ th {
     content: " ";
     width: 0.75em;
     height: 100%;
-    background-color: RGB(108, 191, 238); }
+    background-color: RGB(175, 220, 248); }
 
 .timeline-row {
   overflow: auto;
@@ -416,10 +416,12 @@ th {
     position: absolute;
     content: " ";
     background-image: url("../img/icon-upload.png");
+    background-repeat: no-repeat;
+    background-position: 0.75em .8em;
     background-color: RGB(53, 148, 203);
     width: 2.5em;
     height: 2.5em;
-    border: 0.5em solid RGB(108, 191, 238);
+    border: 0.5em solid RGB(175, 220, 248);
     border-radius: 2.5em;
     left: 10.6em;
     top: 0;
