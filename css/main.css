@@ -356,13 +356,23 @@ td,
 th {
   padding: 0; }
 
+.hold {
+  position: relative; }
+
 .container {
   width: 90%; }
+  .container:after {
+    position: absolute;
+    top: 0;
+    left: 12em;
+    content: " ";
+    width: 0.75em;
+    height: 100%;
+    background-color: RGB(108, 191, 238); }
 
 .timeline-row {
   overflow: auto;
-  margin-top: 24px;
-  position: relative; }
+  margin-top: 24px; }
 
 .timestamp {
   float: left;
@@ -376,14 +386,6 @@ th {
       color: RGB(108, 191, 238); }
     .timestamp .time:nth-child(even) {
       color: RGB(53, 148, 203); }
-  .timestamp:first-child:after {
-    position: absolute;
-    top: 0;
-    left: 12em;
-    content: " ";
-    width: 0.75em;
-    height: 100%;
-    background-color: RGB(108, 191, 238); }
 
 .recipe:nth-of-type(odd) {
   background-color: RGB(108, 191, 238); }
@@ -396,7 +398,8 @@ th {
   width: 68%;
   border-radius: 5px 5px;
   margin-left: 6.25em;
-  color: white; }
+  color: white;
+  padding-bottom: 2.8em; }
   .recipe h1 {
     margin: 1.75em 1.25em 1em 1.25em;
     font-size: 1.7em;
@@ -404,8 +407,11 @@ th {
     border-bottom: 1px solid white; }
   .recipe p {
     padding-left: 2em;
+    padding-right: 2em;
     font-size: 1.25em;
-    letter-spacing: -1px; }
+    letter-spacing: -1px;
+    line-height: 1.3em;
+    font-weight: 100; }
   .recipe:before {
     position: absolute;
     content: " ";
@@ -414,6 +420,7 @@ th {
     height: 2.5em;
     border: 0.5em solid RGB(108, 191, 238);
     border-radius: 2.5em;
-    left: 10.6em; }
+    left: 10.6em;
+    z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */
