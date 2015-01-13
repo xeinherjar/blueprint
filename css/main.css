@@ -415,6 +415,7 @@ th {
   .recipe:before {
     position: absolute;
     content: " ";
+    background-image: url("../img/icon-upload.png");
     background-color: RGB(53, 148, 203);
     width: 2.5em;
     height: 2.5em;

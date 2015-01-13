@@ -93,16 +93,18 @@ $font-face: Lato, Serif;
     font-weight: 100;
   }
 
+  // CIRCLE
   &:before {
     position: absolute;
     content: " ";
+    background-image: url("../img/icon-upload.png");
     background-color: $dark;
     width: 2.5em;
     height: 2.5em;
     border: .5em solid $light;
     border-radius: 2.5em;
     left: 10.6em;
-    z-index: 2;
+    z-index: 2; 
   }
 
  }
