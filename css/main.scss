@@ -9,12 +9,16 @@ $even-row-color: $dark;
 $text-color: white;
 $font-face: Lato, Serif;
 $line-color: RGB(175, 220, 248);
+$date-color: RGB(169, 192, 207);
 
 // MIXINS
 @mixin clearfix() {
   overflow: auto;
 }
 
+body {
+  font-family: $font-face;
+}
 
 .hold {
   position: relative;
@@ -35,7 +39,7 @@ $line-color: RGB(175, 220, 248);
 
 .timeline-row {
   @include clearfix();
-  padding-top: 24px;
+  padding-top: 8px;
   margin-top: 24px;
   position: relative;
  
@@ -55,6 +59,14 @@ $line-color: RGB(175, 220, 248);
     color: $even-row-color;
   }
 
+  &:nth-child(odd) .recipe:after {
+    border-color: transparent $light transparent transparent;
+  }
+  
+  &:nth-child(even) .recipe:after {
+    border-color: transparent $dark transparent transparent;
+  }
+
 
 }
 
@@ -62,9 +74,9 @@ $line-color: RGB(175, 220, 248);
   float: left;
   text-align: right; 
   margin-left: 2em;
-
   .date {
     font-size: 16px;
+    color: $date-color;
   }
 
   .time {
@@ -114,4 +126,17 @@ $line-color: RGB(175, 220, 248);
     z-index: 2; 
   }
 
- }
+
+    &:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: .5em;
+    left: 15em;
+    border-style: solid;
+    border-width: 16px 20px 16px 0;
+    }
+
+
+}
